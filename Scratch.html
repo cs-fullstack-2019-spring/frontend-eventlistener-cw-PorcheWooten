@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">Click Me</button>
+<textarea id="tArea" rows="10" cols="25" disabled></textarea>
+<script>
+    let canType = false;
+
+    let mybtn = document.getElementById("btn");
+    let myta = document.getElementById("tArea");
+
+    mybtn.addEventListener("click", function (e) {
+        console.log("test");
+        if(canType)
+        {
+            myta.setAttribute("disabled", "");
+            canType = false;
+        }
+        else
+        {
+            myta.removeAttribute("disabled");
+            canType = true;
+        }
+
+
+    })
+</script>
+</body>
+</html>
